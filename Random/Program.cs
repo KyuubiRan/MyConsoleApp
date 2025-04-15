@@ -31,12 +31,12 @@ internal static class Program
 
         var formatOption =
             new Option<string?>(aliases: ["--format", "-f"], description: """
-                                                                          The format to use for the random numbers.
+                                                                          The format to use for the random numbers. 
                                                                           See also: 
                                                                           https://learn.microsoft.com/dotnet/api/system.string.format
                                                                           """)
             {
-                ArgumentHelpName = "string",
+                ArgumentHelpName = "string"
             };
 
         var rootCommand = new RootCommand("""
@@ -82,7 +82,6 @@ internal static class Program
         }
 
         var random = seed.HasValue ? new Random(seed.Value) : new Random();
-
 
         for (var i = 0; i < count; i++)
         {
