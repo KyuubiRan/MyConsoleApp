@@ -33,7 +33,7 @@ internal static class Program
             new Option<string?>(aliases: ["--format", "-f"], description: """
                                                                           The format to use for the random numbers.
                                                                           See also: 
-                                                                          `https://learn.microsoft.com/dotnet/api/system.string.format`
+                                                                          https://learn.microsoft.com/dotnet/api/system.string.format
                                                                           """)
             {
                 ArgumentHelpName = "string",
