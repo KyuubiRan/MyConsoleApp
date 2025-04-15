@@ -41,7 +41,7 @@ internal static class Program
 
         var rootCommand = new RootCommand("""
                                           Random number generator.
-                                            Generates random numbers between a minimum and maximum value.
+                                            Generates random numbers in [min, max].
                                             If the minimum and maximum values are integers, the random numbers will be integers,
                                             otherwise they will be doubles.
                                           """)
@@ -88,7 +88,7 @@ internal static class Program
         {
             if (isInteger)
             {
-                var l = random.NextInt64((long)minValue, (long)maxValue);
+                var l = random.NextInt64((long)minValue, (long)maxValue + 1);
                 if (format == null)
                     Console.WriteLine(l);
                 else
