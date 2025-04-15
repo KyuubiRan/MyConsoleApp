@@ -1,0 +1,9 @@
+/MyConsoleApp.sln.DotSettings.user
+/.idea/
+/.vscode/
+/.vs/
+
+**/bin/*
+**/obj/*
+**/Debug/*
+**/Release/*
