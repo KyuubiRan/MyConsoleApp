@@ -15,12 +15,18 @@ internal static class Program
         var minOption =
             new Option<string>(aliases: ["--min", "-m"],
                                description: "The minimum value for the random number generator.",
-                               getDefaultValue: () => "0");
+                               getDefaultValue: () => "0")
+            {
+                ArgumentHelpName = "number"
+            };
 
         var maxOption =
             new Option<string>(aliases: ["--max", "-x"],
                                description: "The maximum value for the random number generator.",
-                               getDefaultValue: () => "1.0");
+                               getDefaultValue: () => "1.0")
+            {
+                ArgumentHelpName = "number"
+            };
 
         var countOption =
             new Option<int>(aliases: ["--count", "-c"], description: "The number of random numbers to generate.",
@@ -30,11 +36,12 @@ internal static class Program
             };
 
         var formatOption =
-            new Option<string?>(aliases: ["--format", "-f"], description: """
-                                                                          The format to use for the random numbers. 
-                                                                          See also: 
-                                                                          https://learn.microsoft.com/dotnet/api/system.string.format
-                                                                          """)
+            new Option<string?>(aliases: ["--format", "-f"],
+                                description: """
+                                             The format to use for the random numbers. 
+                                             See also: 
+                                             https://learn.microsoft.com/dotnet/api/system.string.format
+                                             """)
             {
                 ArgumentHelpName = "string"
             };
